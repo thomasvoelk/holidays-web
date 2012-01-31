@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+      <facet type="google-app-engine" name="Google App Engine">
+        <configuration>
+          <sdk-home-path>$MODULE_DIR$/../../GoogleAppEngine/appengine-java-sdk-1.6.1.1</sdk-home-path>
+        </configuration>
+      </facet>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/java/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="AppEngine API" level="project" />
+    <orderEntry type="library" name="Restlet" level="project" />
+    <orderEntry type="library" name="Google Guava" level="project" />
+    <orderEntry type="library" name="Holidays Core" level="project" />
+    <orderEntry type="library" name="JodaTime" level="project" />
+    <orderEntry type="library" name="jollyday-0.4.5" level="project" />
+    <orderEntry type="library" name="jquery.ui.datepicker-de" level="application" />
+  </component>
+</module>
+
