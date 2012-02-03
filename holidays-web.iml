@@ -28,10 +28,10 @@
     <orderEntry type="library" name="AppEngine API" level="project" />
     <orderEntry type="library" name="Restlet" level="project" />
     <orderEntry type="library" name="Google Guava" level="project" />
-    <orderEntry type="library" name="Holidays Core" level="project" />
     <orderEntry type="library" name="JodaTime" level="project" />
     <orderEntry type="library" name="jollyday-0.4.5" level="project" />
     <orderEntry type="library" name="jquery.ui.datepicker-de" level="application" />
+    <orderEntry type="module" module-name="holidays" />
   </component>
 </module>
 
