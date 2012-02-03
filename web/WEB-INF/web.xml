@@ -17,7 +17,7 @@
         <url-pattern>/public/rest/*</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>public/calculator.html</welcome-file>
     </welcome-file-list>
     <!--<security-constraint>-->
         <!--<web-resource-collection>-->
