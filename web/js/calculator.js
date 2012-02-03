@@ -22,7 +22,7 @@ $(function () {
                     if (toDate) {
                         to = $.datepicker.formatDate('yy-mm-dd', toDate);
                     }
-                    return "ws/calculate/neededDays?from=" + from + "&to=" + to;
+                    return "/public/rest/calculate/neededDays?from=" + from + "&to=" + to;
                 }(),
                 context:document.body,
                 dataType:"text",

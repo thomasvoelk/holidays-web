@@ -4,6 +4,7 @@ import com.google.common.base.*;
 import org.restlet.data.*;
 import org.restlet.resource.*;
 import org.voelk.holidays.*;
+import org.voelk.holidays.transactions.*;
 
 import java.text.*;
 import java.util.*;
@@ -19,8 +20,8 @@ public class HolidayCalculatorWebserviceResource extends ServerResource {
     public String calculate() {
         readRequestParameters();
         try {
-            HolidayCalculator calculator = new HolidayCalculator();
-            double daysNeeded = calculator.daysNeededFor(new DefaultHolidayPeriod(convert(from), convert(to)));
+            Transaction<CalculateNeededDaysRequest, CalculateNeededDaysResponse> calculator = new CalculateNeededDaysTransaction();
+            double daysNeeded = calculator.execute(new DefaultCalculateNeededDaysRequest(convert(from), convert(to))).getDays();
             return formatResponse(daysNeeded);
         } catch (Exception ex) {
             throw new RuntimeException(ex);
@@ -58,12 +59,12 @@ public class HolidayCalculatorWebserviceResource extends ServerResource {
         return new SimpleDateFormat(DATE_PATTERN).parse(date);
     }
 
-    class DefaultHolidayPeriod implements HolidayPeriod {
+    class DefaultCalculateNeededDaysRequest implements CalculateNeededDaysRequest {
 
         private final Date start;
         private final Date end;
 
-        DefaultHolidayPeriod(Date start, Date end) {
+        DefaultCalculateNeededDaysRequest(Date start, Date end) {
             this.start = start;
             this.end = end;
         }
