@@ -1,13 +1,16 @@
 package org.voelk.holidays.web;
 
-import org.restlet.*;
-import org.restlet.routing.*;
-import org.voelk.holidays.web.webservices.HolidayCalculatorWebserviceResource;
+import org.restlet.resource.*;
+import org.voelk.holidays.web.webservices.*;
 
-public class HolidayWebservicesApplication extends Application {
-    public Restlet createInboundRoot() {
-        Router router = new Router(getContext());
-        router.attach("/calculate/neededDays", HolidayCalculatorWebserviceResource.class);
-        return router;
+import java.util.*;
+
+public class HolidayWebservicesApplication extends HolidayApplication {
+
+    @Override
+    protected Map<String, Class<? extends ServerResource>> getRoutes() {
+        Map<String, Class<? extends ServerResource>> ret = new HashMap<String, Class<? extends ServerResource>>();
+        ret.put("/public/calculate/neededDays", HolidayCalculatorWebserviceResource.class);
+        return ret;
     }
 }

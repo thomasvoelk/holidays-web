@@ -1,8 +1,11 @@
-$(function () {
-    var dates = $("#from, #to").datepicker({
+/*global $, jQuery */
+function initDatePickers() {
+    "use strict";
+    var dates = $("#localFrom, #localTo").datepicker({
         numberOfMonths:2,
+        altFormat:"yy-mm-dd",
         onSelect:function (selectedDate) {
-            var option = this.id == "from" ? "minDate" : "maxDate",
+            var option = this.id === "localFrom" ? "minDate" : "maxDate",
                 instance = $(this).data("datepicker"),
                 date = $.datepicker.parseDate(
                     instance.settings.dateFormat ||
@@ -10,28 +13,22 @@ $(function () {
                     selectedDate, instance.settings);
             dates.not(this).datepicker("option", option, date);
             $("#daysNeeded").text("Berechne...");
-            $.ajax({
-                url:function () {
-                    var fromDate = dates.filter("#from").datepicker("getDate"),
-                        toDate = dates.filter("#to").datepicker("getDate"),
-                        from = "",
-                        to = "";
-                    if (fromDate) {
-                        from = $.datepicker.formatDate('yy-mm-dd', fromDate);
-                    }
-                    if (toDate) {
-                        to = $.datepicker.formatDate('yy-mm-dd', toDate);
-                    }
-                    return "/public/rest/calculate/neededDays?from=" + from + "&to=" + to;
-                }(),
-                context:document.body,
-                dataType:"text",
-                success:function (data) {
-                    $("#daysNeeded").text(data);
-                }
-            });
+            $('#calculationForm').submit();
         }
-    })
-        ;
+    });
+    $("#localFrom").datepicker("option", "altField", '#from');
+    $("#localTo").datepicker("option", "altField", '#to');
+}
+function bindSubmitToAjaxRequest() {
+    "use strict";
+    var options = {
+        target:'#daysNeeded'
+    };
+    $('#calculationForm').ajaxForm(options);
+}
 
+$(function () {
+    "use strict";
+    bindSubmitToAjaxRequest();
+    initDatePickers();
 });

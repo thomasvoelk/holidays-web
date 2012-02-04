@@ -5,4 +5,9 @@
     <system-properties>
         <property name="de.jollyday.config" value="WEB-INF/jollyday.properties"/>
     </system-properties>
+    <static-files>
+        <include path="/css/**.css"/>
+        <include path="/js/**.js"/>
+        <include path="/favicon.ico"/>
+    </static-files>
 </appengine-web-app>

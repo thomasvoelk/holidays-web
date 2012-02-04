@@ -14,18 +14,30 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>HolidayWebservices</servlet-name>
-        <url-pattern>/public/rest/*</url-pattern>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>HolidayPages</servlet-name>
+        <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+        <init-param>
+            <param-name>org.restlet.application</param-name>
+            <param-value>org.voelk.holidays.web.HolidayPagesApplication</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HolidayPages</servlet-name>
+        <url-pattern>/pages/*</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>public/calculator.html</welcome-file>
+        <welcome-file>pages/public/calculator</welcome-file>
     </welcome-file-list>
     <!--<security-constraint>-->
-        <!--<web-resource-collection>-->
-            <!--<web-resource-name>all</web-resource-name>-->
-            <!--<url-pattern>/*</url-pattern>-->
-        <!--</web-resource-collection>-->
-        <!--<auth-constraint>-->
-            <!--<role-name>*</role-name>-->
-        <!--</auth-constraint>-->
+    <!--<web-resource-collection>-->
+    <!--<web-resource-name>all</web-resource-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+    <!--</web-resource-collection>-->
+    <!--<auth-constraint>-->
+    <!--<role-name>*</role-name>-->
+    <!--</auth-constraint>-->
     <!--</security-constraint>-->
 </web-app>

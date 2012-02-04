@@ -1,3 +1,4 @@
+<#macro page>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +11,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/i18n/jquery.ui.datepicker-de.js"
             type="text/javascript"></script>
+    <script src="js/jquery.form.js" type="text/javascript"></script>
     <script src="http://www.planbox.com/feedback/feedback.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/calculator.js"></script>
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"
           type="text/css" media="all"/>
@@ -24,17 +25,8 @@
     FeedbackOptions.dialogTitle = 'Tell us what you think';
 </script>
 <div id="content">
-    <h1>Urlaubsplanung</h1>
-
-    <div id="calendar">
-        <label for="from">Von:</label>
-        <input type="text" name="from" id="from"/>
-        <label for="to">Bis:</label>
-        <input type="text" name="to" id="to"/>
-    </div>
-    <div>
-        benötigte Tage: <span id="daysNeeded"></span>
-    </div>
+    <#nested/>
 </div>
 </body>
 </html>
+</#macro>
