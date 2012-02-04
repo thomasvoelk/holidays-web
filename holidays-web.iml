@@ -25,11 +25,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="AppEngine API" level="project" />
-    <orderEntry type="library" name="Restlet" level="project" />
-    <orderEntry type="library" name="Freemarker" level="project" />
-    <orderEntry type="library" name="Google Guava" level="project" />
-    <orderEntry type="library" name="JodaTime" level="project" />
+    <orderEntry type="library" name="AppEngine API 1.6.1.1" level="project" />
+    <orderEntry type="library" name="RestletGAE 2.1" level="project" />
+    <orderEntry type="library" name="Freemarker GAE 2.3.18" level="project" />
+    <orderEntry type="library" name="Google Guava 11.0.1" level="project" />
+    <orderEntry type="library" name="JodaTime 2.0" level="project" />
     <orderEntry type="library" name="jollyday-0.4.5" level="project" />
     <orderEntry type="library" name="jquery.ui.datepicker-de" level="application" />
     <orderEntry type="module" module-name="holidays" />

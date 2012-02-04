@@ -10,7 +10,7 @@ import org.voelk.holidays.web.webservices.*;
 
 public class HolidayApplication extends Application {
 
-    private Configuration configuration;
+    private Configuration freemarkerConfiguration;
 
     public HolidayApplication() {
         getConnectorService().getClientProtocols().add(Protocol.WAR);
@@ -19,10 +19,10 @@ public class HolidayApplication extends Application {
 
     @Override
     public Restlet createInboundRoot() {
-        configuration = new Configuration();
-        configuration.setTemplateLoader(new ContextTemplateLoader(getContext(),
+        freemarkerConfiguration = new Configuration();
+        freemarkerConfiguration.setTemplateLoader(new ContextTemplateLoader(getContext(),
                 "war:///WEB-INF/templates/pages"));
-        configuration.setDefaultEncoding("UTF-8");
+        freemarkerConfiguration.setDefaultEncoding("UTF-8");
         Router router = new Router(getContext());
         router.attach("/public/calculate/neededDays", HolidayCalculatorWebserviceResource.class);
         router.attach("/public/calculator", CalculatorPageResource.class);
@@ -34,7 +34,7 @@ public class HolidayApplication extends Application {
         return router;
     }
 
-    public Configuration getConfiguration() {
-        return configuration;
+    public Configuration getFreemarkerConfiguration() {
+        return freemarkerConfiguration;
     }
 }
