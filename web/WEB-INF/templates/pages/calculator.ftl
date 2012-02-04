@@ -1,7 +1,7 @@
 <#import "basePage.ftl" as master>
 <@master.page>
-<script type="text/javascript" src="js/calculator.js"></script>
-<form id="calculationForm" action="/rest/public/calculate/neededDays" method="get">
+<script type="text/javascript" src="/js/calculator.js"></script>
+<form id="calculationForm" action="/app/public/calculate/neededDays" method="get">
     <h1>Urlaubsplanung</h1>
 
     <div id="calendar">

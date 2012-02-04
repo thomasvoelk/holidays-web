@@ -11,13 +11,13 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/i18n/jquery.ui.datepicker-de.js"
             type="text/javascript"></script>
-    <script src="js/jquery.form.js" type="text/javascript"></script>
+    <script src="/js/jquery.form.js" type="text/javascript"></script>
     <script src="http://www.planbox.com/feedback/feedback.js" type="text/javascript"></script>
-    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"
           type="text/css" media="all"/>
     <link href="http://www.planbox.com/feedback/feedback.css" rel="stylesheet" type="text/css"/>
-    <link type="text/css" rel="stylesheet" href="css/holidays.css">
+    <link type="text/css" rel="stylesheet" href="/css/holidays.css">
 </head>
 <body>
 <script type="text/javascript">

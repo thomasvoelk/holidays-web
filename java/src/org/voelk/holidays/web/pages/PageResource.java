@@ -10,13 +10,21 @@ import java.util.*;
 
 public abstract class PageResource extends ServerResource {
     @Override
-    public HolidayPagesApplication getApplication() {
-        return (HolidayPagesApplication) super.getApplication();
+    public HolidayApplication getApplication() {
+        return (HolidayApplication) super.getApplication();
     }
 
     @Get
     public Representation toHtml() {
         return toRepresentation();
+    }
+
+    protected Map<String, Object> createPageData() {
+        Map<String, Object> ret = getPageData();
+//        String s1 = getRequest().getRootRef().getPath();
+//        String s2 = getRequest().getRootRef().toString();
+//        ret.put("pageContext", s1);
+        return ret;
     }
 
     protected MediaType getMediaType() {
@@ -28,6 +36,6 @@ public abstract class PageResource extends ServerResource {
     protected abstract Map<String, Object> getPageData();
 
     protected Representation toRepresentation() {
-        return new TemplateRepresentation(getTemplatePath(), getApplication().getConfiguration(), getPageData(), getMediaType());
+        return new TemplateRepresentation(getTemplatePath(), getApplication().getConfiguration(), createPageData(), getMediaType());
     }
 }
