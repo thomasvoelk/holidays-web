@@ -13,9 +13,8 @@ public class GaeAuthenticator extends ChallengeAuthenticator {
     @Override
     protected boolean authenticate(Request request, Response response) {
         if (!UserServiceFactory.getUserService().isUserLoggedIn()) {
-            String path = request.getOriginalRef().getPath();
-            String loginURL = UserServiceFactory.getUserService().createLoginURL(path);
-            response.redirectTemporary(loginURL);
+            String loginUrl = UserServiceFactory.getUserService().createLoginURL(request.getOriginalRef().getPath());
+            response.redirectTemporary(loginUrl);
             return false;
         } else {
             return true;

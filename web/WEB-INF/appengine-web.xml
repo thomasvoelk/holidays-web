@@ -9,5 +9,6 @@
         <include path="/css/**.css"/>
         <include path="/js/**.js"/>
         <include path="/favicon.ico"/>
+        <include path="/index.html"/>
     </static-files>
 </appengine-web-app>

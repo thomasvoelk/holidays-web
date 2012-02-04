@@ -1,3 +1,5 @@
+<#-- @ftlvariable name="userIsLoggedIn" type="boolean" -->
+<#-- @ftlvariable name="logoutUrl" type="java.lang.String" -->
 <#macro page>
 <!DOCTYPE html>
 <html>
@@ -24,6 +26,9 @@
     FeedbackOptions.planboxToken = '732647a147763a25c3c135dc87a90282';
     FeedbackOptions.dialogTitle = 'Tell us what you think';
 </script>
+    <#if userIsLoggedIn>
+    <a href="${logoutUrl}">Logout</a>
+    </#if>
 <div id="content">
     <#nested/>
 </div>

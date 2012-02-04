@@ -1,5 +1,6 @@
 package org.voelk.holidays.web.pages;
 
+import com.google.appengine.api.users.*;
 import org.restlet.data.*;
 import org.restlet.ext.freemarker.*;
 import org.restlet.representation.*;
@@ -21,9 +22,8 @@ public abstract class PageResource extends ServerResource {
 
     protected Map<String, Object> createPageData() {
         Map<String, Object> ret = getPageData();
-//        String s1 = getRequest().getRootRef().getPath();
-//        String s2 = getRequest().getRootRef().toString();
-//        ret.put("pageContext", s1);
+        ret.put("logoutUrl", UserServiceFactory.getUserService().createLogoutURL("/index.html"));
+        ret.put("userIsLoggedIn", UserServiceFactory.getUserService().isUserLoggedIn());
         return ret;
     }
 
