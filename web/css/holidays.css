@@ -1,1 +1,90 @@
-.ui-datepicker { width: 17em; padding: .2em .2em 0; font-size: 12px !important;}
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer {
+    border-top: 1px solid #ccc;
+}
+
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
+
+a {
+    color: #525252;
+}
+
+header {
+    padding-top: 25px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+header .logo {
+    font-size: 3.52em;
+}
+
+header nav ul li {
+    float: left;
+    margin: 12px 0 0 0;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 5px 15px;
+    border-right: 1px solid #eee;
+    font-size: 1.52em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #eee;
+    border-right: 1px solid #ccc;
+    text-shadow: -1px -1px 0 #fff;
+}
+
+header nav ul li.last a {
+    border-right: none;
+}
+
+.ui-datepicker {
+    padding: .2em .2em 0;
+    font-size: 2em !important;
+}
+
+input.datepicker {
+    width: 298px;
+    font-size: 4.5em;
+    color: #6495ed;
+}
+
+input.empty {
+    color: gray;
+}
+
+button#clearForm {
+    font-size: 2em;
+    height: 2.8em;
+}
+
+#calculationResult div {
+    font-size: 4em;
+}
+
+#calculationResult div span {
+    color: green;
+    font-weight: bold;
+}

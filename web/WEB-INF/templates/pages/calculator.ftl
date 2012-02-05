@@ -1,17 +1,25 @@
 <#import "basePage.ftl" as master>
 <@master.page>
 <script type="text/javascript" src="/js/calculator.js"></script>
-<form id="calculationForm" action="/app/public/calculate/neededDays" method="get">
-    <h1>Urlaubsplanung</h1>
+<section id="calendar" class="container_12">
+    <h2 class="grid_12">Wann möchtest Du Urlaub nehmen?</h2>
 
-    <div id="calendar">
-        <label for="localFrom">Von:</label>
-        <input type="text" name="localFrom" id="localFrom"/><input type="hidden" name="from" id="from"/>
-        <label for="localTo">Bis:</label>
-        <input type="text" name="localTo" id="localTo"/><input type="hidden" name="to" id="to"/>
+    <form id="calculationForm" action="/app/public/workingDays" method="get">
+        <div class="container_12">
+            <input type="date" class="datepicker grid_4" name="localFrom" id="localFrom" readonly="readonly"/><input type="hidden" name="from" id="from"/>
+            <input type="date" class="datepicker grid_4" name="localTo" id="localTo" readonly="readonly"/><input type="hidden" name="to" id="to"/>
+            <button type="button" id="clearForm" class="grid_2">Löschen</button>
+        </div>
+    </form>
+</section>
+
+
+<section id="calculationResult" class="container_12" style="min-height: 50px">
+    <div id="result" class="grid_12">
+        Dafür benötigst Du <span id="workingDays"></span> Urlaubstage
     </div>
-    <div>
-        benötigte Tage: <span id="daysNeeded"></span>
+    <div id="inProgress" class="grid_12">
+        Berechnung läuft...
     </div>
-</form>
+</section>
 </@master.page>

@@ -36,6 +36,6 @@ public abstract class PageResource extends ServerResource {
     protected abstract Map<String, Object> getPageData();
 
     protected Representation toRepresentation() {
-        return new TemplateRepresentation(getTemplatePath(), getApplication().getFreemarkerConfiguration(), createPageData(), getMediaType());
+        return new TemplateRepresentation(getTemplatePath(), getApplication().getTemplateEngineConfiguration(), createPageData(), getMediaType());
     }
 }
