@@ -1,18 +1,19 @@
 /*global $, jQuery */
-function emptyDateField(field, text) {
+function emptyDateField(dateField, text) {
     "use strict";
-    if (field.val().length === 0 || field.val() === text) {
-        field.datepicker("setDate", null);
-        field.val(text);
-        field.addClass('empty');
+    if (dateField.val().length === 0 || dateField.val() === text) {
+        dateField.datepicker("setDate", null);
+        dateField.val(text);
+        dateField.addClass('empty');
     }
 }
 
 function emptyDateFields() {
     "use strict";
-    emptyDateField($('#localFrom'), "Von...");
-    emptyDateField($('#localTo'), "Bis...");
+    emptyDateField($('#localFrom'), "Von...", $('#localTo'));
+    emptyDateField($('#localTo'), "Bis...", $('#localFrom'));
 }
+
 function initDatePickers() {
     "use strict";
     var dates = $("#localFrom, #localTo").datepicker({
@@ -58,10 +59,20 @@ function hideResultAndProgressInfo() {
     $('#result').hide();
     $('#inProgress').hide();
 }
+function resetMinAndMaxDateOptions() {
+    "use strict";
+    $("#localFrom, #localTo").datepicker("option", "minDate", null);
+    $("#localFrom, #localTo").datepicker("option", "maxDate", null);
+}
+function clearFormFields() {
+    "use strict";
+    $('#calculationForm').clearForm(true);
+}
 function initFormButton() {
     "use strict";
     $('#clearForm').bind('click', function () {
-        $('#calculationForm').clearForm(true);
+        resetMinAndMaxDateOptions();
+        clearFormFields();
         hideResultAndProgressInfo();
         emptyDateFields();
     });
