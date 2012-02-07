@@ -31,8 +31,10 @@
     <orderEntry type="library" name="Google Guava 11.0.1" level="project" />
     <orderEntry type="library" name="JodaTime 2.0" level="project" />
     <orderEntry type="library" name="jollyday-0.4.5" level="project" />
+    <orderEntry type="library" name="Guice3.0" level="project" />
     <orderEntry type="library" name="jquery.ui.datepicker-de" level="application" />
     <orderEntry type="module" module-name="holidays" />
+    <orderEntry type="library" name="Gson2.1" level="project" />
   </component>
 </module>
 

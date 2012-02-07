@@ -9,12 +9,7 @@ import org.voelk.holidays.web.*;
 
 import java.util.*;
 
-public abstract class PageResource extends ServerResource {
-    @Override
-    public HolidayApplication getApplication() {
-        return (HolidayApplication) super.getApplication();
-    }
-
+public abstract class PageResource extends BaseServerResource {
     @Get
     public Representation toHtml() {
         return toRepresentation();
@@ -24,6 +19,7 @@ public abstract class PageResource extends ServerResource {
         Map<String, Object> ret = getPageData();
         ret.put("logoutUrl", UserServiceFactory.getUserService().createLogoutURL("/index.html"));
         ret.put("userIsLoggedIn", UserServiceFactory.getUserService().isUserLoggedIn());
+        ret.put("userId", getClientInfo().getUser().getIdentifier());
         return ret;
     }
 

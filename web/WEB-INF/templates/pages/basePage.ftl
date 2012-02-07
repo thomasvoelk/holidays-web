@@ -32,6 +32,7 @@
             <ul>
                 <li><a href="/">home</a></li>
                 <#if userIsLoggedIn>
+                    <li><a href="/app/private/pages/user?userId=${userId}">profil</a></li>
                     <li><a href="${logoutUrl}">logout</a></li>
                 </#if>
             </ul>

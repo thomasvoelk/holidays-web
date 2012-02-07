@@ -3,11 +3,12 @@ package org.voelk.holidays.web.resources;
 import com.google.common.base.*;
 import org.restlet.resource.*;
 import org.voelk.holidays.application.*;
+import org.voelk.holidays.web.*;
 import org.voelk.holidays.web.util.*;
 
 import java.text.*;
 
-public class WorkingDaysResource extends ServerResource {
+public class WorkingDaysResource extends BaseServerResource {
 
     private String from = "";
     private String to = "";
@@ -22,8 +23,7 @@ public class WorkingDaysResource extends ServerResource {
     @SuppressWarnings("UnusedDeclaration")
     @Get("txt")
     public String represent() {
-        HolidayCalculator calculator = new Application().getHolidayCalculator();
-        double daysNeeded = calculator.calculateWorkingDays(period);
+        double daysNeeded = getApplication().getHolidayApplication().getHolidayCalculator().calculateWorkingDays(period);
         return formatResponse(daysNeeded);
     }
 

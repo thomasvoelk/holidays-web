@@ -1,7 +1,6 @@
 package org.voelk.holidays.web;
 
 import org.restlet.*;
-import org.restlet.ext.gae.*;
 import org.restlet.routing.*;
 import org.restlet.security.*;
 import org.voelk.holidays.web.pages.*;
@@ -24,7 +23,8 @@ public class ApplicationRouter extends Router {
 
     private void attachPrivateResources(Router secureRouter) {
         secureRouter.attach("/calculator", CalculatorPageResource.class);
-        secureRouter.attach("/accounts/{accountId}", AccountResource.class);
+        secureRouter.attach("/pages/user", UserPageResource.class);
+        secureRouter.attach("/users/{userId}", UserResource.class);
     }
 
     private void attachAuthenticatorForPrivateResources(Router secureRouter) {
