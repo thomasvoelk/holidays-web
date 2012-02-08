@@ -9,7 +9,7 @@
         <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
         <init-param>
             <param-name>org.restlet.application</param-name>
-            <param-value>org.voelk.holidays.web.HolidayWebApplication</param-value>
+            <param-value>org.voelk.holidays.web.application.HolidayWebApplication</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

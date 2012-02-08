@@ -3,7 +3,7 @@ package org.voelk.holidays.web.resources;
 import com.google.common.base.*;
 import org.restlet.resource.*;
 import org.voelk.holidays.application.*;
-import org.voelk.holidays.web.*;
+import org.voelk.holidays.web.application.*;
 import org.voelk.holidays.web.util.*;
 
 import java.text.*;

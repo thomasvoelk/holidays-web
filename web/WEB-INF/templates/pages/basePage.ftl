@@ -1,5 +1,5 @@
-<#-- @ftlvariable name="userIsLoggedIn" type="boolean" -->
-<#-- @ftlvariable name="logoutUrl" type="java.lang.String" -->
+<#-- @ftlvariable name="_userIsLoggedIn" type="boolean" -->
+<#-- @ftlvariable name="_logoutUrl" type="java.lang.String" -->
 <#macro page>
 <!DOCTYPE html>
 <html>
@@ -31,9 +31,9 @@
         <nav class="grid_6">
             <ul>
                 <li><a href="/">home</a></li>
-                <#if userIsLoggedIn>
-                    <li><a href="/app/private/pages/user?userId=${userId}">profil</a></li>
-                    <li><a href="${logoutUrl}">logout</a></li>
+                <#if _userIsLoggedIn>
+                    <li><a href="/app/private/pages/user?userId=${_userId}">profil</a></li>
+                    <li><a href="${_logoutUrl}">logout</a></li>
                 </#if>
             </ul>
         </nav>

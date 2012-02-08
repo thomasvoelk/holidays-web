@@ -1,4 +1,4 @@
-package org.voelk.holidays.web;
+package org.voelk.holidays.web.application;
 
 import com.google.inject.*;
 import org.voelk.holidays.application.*;

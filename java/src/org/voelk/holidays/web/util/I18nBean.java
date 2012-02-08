@@ -1,4 +1,4 @@
-package org.voelk.holidays.web;
+package org.voelk.holidays.web.util;
 
 import java.util.*;
 
