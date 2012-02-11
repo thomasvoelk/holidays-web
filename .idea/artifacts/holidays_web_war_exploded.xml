@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="holidays-web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/holidays_web_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="holidays-web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="holidays-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="AppEngine API 1.6.1.1" />
+          <element id="library" level="project" name="RestletGAE 2.1" />
+          <element id="library" level="project" name="Google Guava 11.0.1" />
+          <element id="library" level="project" name="JodaTime 2.0" />
+          <element id="library" level="project" name="jollyday-0.4.5" />
+          <element id="artifact" artifact-name="holidays" />
+          <element id="library" level="project" name="Freemarker GAE 2.3.18" />
+          <element id="library" level="project" name="Guice3.0" />
+          <element id="library" level="project" name="Gson2.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

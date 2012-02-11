@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Freemarker GAE 2.3.18">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/freemarker-gae-2.3.18.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../lib/freemarker-gae-2.3.18/src" />
+    </SOURCES>
+  </library>
+</component>

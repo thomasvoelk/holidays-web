@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Guice3.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../holidays/lib/guice-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../holidays/lib/javax.inject.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../holidays/lib/aopalliance.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

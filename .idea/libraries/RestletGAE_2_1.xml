@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="RestletGAE 2.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.restlet.ext.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.restlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.restlet.ext.freemarker.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.restlet.ext.gae.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../lib/restlet-gae-2.1rc2/src/org.restlet" />
+      <root url="file://$PROJECT_DIR$/../../lib/restlet-gae-2.1rc2/src/org.restlet.ext.freemarker" />
+      <root url="file://$PROJECT_DIR$/../../lib/restlet-gae-2.1rc2/src/org.restlet.ext.servlet" />
+      <root url="file://$PROJECT_DIR$/../../lib/restlet-gae-2.1rc2/src/org.restlet.ext.gae" />
+    </SOURCES>
+  </library>
+</component>
