@@ -8,7 +8,6 @@
           <element id="module-output" name="holidays-web" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="AppEngine API 1.6.1.1" />
           <element id="library" level="project" name="RestletGAE 2.1" />
           <element id="library" level="project" name="Google Guava 11.0.1" />
           <element id="library" level="project" name="JodaTime 2.0" />
@@ -17,6 +16,7 @@
           <element id="library" level="project" name="Freemarker GAE 2.3.18" />
           <element id="library" level="project" name="Guice3.0" />
           <element id="library" level="project" name="Gson2.1" />
+          <element id="library" level="project" name="AppEngineAPI1.6.2" />
         </element>
       </element>
     </root>

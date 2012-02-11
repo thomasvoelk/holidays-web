@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="AppEngineAPI1.6.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../GoogleAppEngine/appengine-java-sdk-1.6.2/lib/user" />
+      <root url="file://$PROJECT_DIR$/../../GoogleAppEngine/appengine-java-sdk-1.6.2/lib/user" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../GoogleAppEngine/appengine-java-sdk-1.6.2/lib/user" recursive="false" />
+  </library>
+</component>
