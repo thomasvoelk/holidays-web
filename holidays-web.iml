@@ -12,7 +12,7 @@
       </configuration>
       <facet type="google-app-engine" name="Google App Engine">
         <configuration>
-          <sdk-home-path>$MODULE_DIR$/../../GoogleAppEngine/appengine-java-sdk-1.6.1.1</sdk-home-path>
+          <sdk-home-path>$MODULE_DIR$/../../GoogleAppEngine/appengine-java-sdk-1.6.2</sdk-home-path>
           <email>thomas.voelk@gmail.com</email>
         </configuration>
       </facet>
