@@ -46,7 +46,7 @@
 </div>
 <footer class="footer container_12">
     <div class="grid_12">
-        <img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif" alt="Powered by Google App Engine"/>
+        <a href="http://code.google.com/appengine/" target="_blank"><img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif" alt="Powered by Google App Engine"/></a>
     </div>
 </footer>
 </body>
